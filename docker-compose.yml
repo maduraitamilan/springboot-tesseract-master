@@ -1,0 +1,9 @@
+services:
+  tesseract-engine:
+    image: maduraitamilan/tesseract-engine:v1.0.0
+  springboot-tesseract-master:
+    image: maduraitamilan/tesseract-master:v1.0.0          
+    ports:
+      - "8443:8443"
+    depends on: 
+      - tesseract-engine     
